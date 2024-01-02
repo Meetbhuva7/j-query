@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="event.css">
+</head>
+
+<body>
+    <div class="welcome">
+        <h1>welcome to webpage</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, laboriosam minima suscipit ratione id
+            perspiciatis nam reprehenderit debitis beatae aliquid soluta consectetur sapiente quidem omnis quae libero
+            hic rerum harum aperiam reiciendis. Repellendus voluptates reiciendis temporibus libero molestiae voluptatum
+            omnis?
+        </p>
+
+        <h3>thanks</h3>
+    </div>
+
+    <!-- <div>
+        <h2 class="title">MEET,DARSHAK,SAHIL</h2>
+
+        <button class="btn-hide">hide</button>
+        <button class="btn-show">show</button>
+        <button class="btn-toggle">toggle</button>
+    </div> -->
+
+    <!-- <div  class="main">
+        <h2 class="title">MEET,DARSHAK,SAHIL</h2>
+
+        <button class="btn-slideup">up</button>
+        <button class="btn-slidedown">down</button>
+        <button class="btn-slidetoggle">toggle</button>
+    </div> -->
+
+    <div class="main-1">
+        <h2 class="title">MEET,DARSHAK,SAHIL</h2>
+
+        <button class="btn-fadein">in</button>
+        <button class="btn-fadeout">out</button>
+        <button class="btn-toggle">toggle</button>
+    </div>
+
+
+
+    <script src="./releases.jquery.com_git_jquery-git.min.js"></script>
+
+    <script>
+        // keypress
+        $(document).ready(function () {
+            $("body").keypress(function () {
+                $(this).css("background-color", "lightyellow")
+                $(this).css("background-image", "url(pic-1.jpg);")
+            });
+        });
+
+        // keydown
+
+        // $(document).ready(function (){
+        //     $("body").keydown(function(){
+        //         $(this).css("color","cadetblue")
+        //     });
+        // });
+
+        // keyup
+
+        $(document).ready(function () {
+            $("body").keyup(function () {
+                $(this).css("background-color", "lightyblue")
+                // $(this).css('background-image', "URL('pic-1.jpg')")
+            });
+        });
+
+        // click
+
+        $(document).ready(function () {
+            $(".welcome").click(function () {
+                $(this).css("font-size", "22px")
+            });
+        });
+
+        // dblclicl
+
+        $(document).ready(function () {
+            $(".welcome").dblclick(function () {
+                $(this).css("color", "darkcyan")
+            });
+        });
+
+        // context menu
+
+        $(document).ready(function () {
+            $(".welcome").contextmenu(function () {
+                $(this).css("font-style", "italic")
+            });
+        });
+
+        // mouse enter
+
+        $(document).ready(function () {
+            $(".welcome").mouseenter(function () {
+                $(this).css("font-size", "26px")
+                $(this).css("border-redius", "10px")
+                $(this).css("color", "black")
+                $(this).css("background-color", "goldenrod")
+
+
+            });
+        });
+
+        // mouse over
+
+        $(document).ready(function () {
+            $(".welcome").mouseover(function () {
+                $(this).css("font-style", "italic")
+                $(this).css("font-size", "20px")
+            });
+        });
+
+
+
+
+
+    </script>
+
+    <!-- <script>
+        $('.btn-hide').click(function (){
+            $('.title').hide(3000);
+        })
+
+        $('.btn-show').click(function (){
+            $('.title').show('show')
+        })
+
+        $('.btn-toggle').click(function (){
+            $('.title').toggle('toggle')
+        })
+    </script> -->
+
+    <!-- <script>
+    $('.btn-sildeup').click(function (){
+        $('.title').slideUp('slideup')
+    })
+
+    $('.btn-slidedown').click(function (){
+        $('.title').slideDown('slidedown')
+    })
+
+    $('.btn-slidetoggle').click(function (){
+        $('.title').slideToggle('slidetoggle')
+    })
+</script> -->
+
+    <script>
+        $('.btn-fadein').click(function () {
+            $('.title').fadeIn(2000);
+        })
+
+        $('.btn-fadeout').click(function () {
+            $('.title').fadeOut(3000);
+        })
+
+        $('.btn-toggle').click(function () {
+            $('.title').fadeToggle(fadeToggle)
+        })
+    </script>
+
+</body>
+
+</html>
