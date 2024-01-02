@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sticky.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+</head>
+
+<body>
+    <!-- Back to top button -->
+    <a id="button"></a>
+
+    <div class="wrapper">
+
+        <div class="header">
+            <h1>This is the header.</h1>
+            <h2>Scroll down to see the
+                <span class="color">sticky effect</span>.
+            </h2>
+        </div>
+
+        <div class="nav">
+            <ul>
+                <li><i class="fas fa-search"></i></li>
+                <li><i class="far fa-comments"></i></li>
+                <li><i class="far fa-address-card"></i></li>
+                <li><i class="fas fa-chart-bar"></i></li>
+                <li><i class="far fa-envelope"></i></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h3>Sticky Navigation Example</h3>
+
+            <h4 class="color">Keep scrolling.</h4>
+
+            <p>Some text to enable scrolling. <br /><br />
+                Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas
+                ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et.
+                Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+
+            <p>Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut
+                quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et.
+                Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+
+            <p>Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut
+                quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et.
+                Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+
+            <p>Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut
+                quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et.
+                Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+
+            <p>Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut
+                quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et.
+                Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+
+            <p>Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut
+                quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et.
+                Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+
+            <p>Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut
+                quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et.
+                Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+
+        </div>
+    </div>
+
+
+    <script src="../releases.jquery.com_git_jquery-git.min.js"></script>
+
+    <script>
+        var btn = $('#button');
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        });
+
+        btn.on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, '300');
+        });
+
+        const wrapper = document.querySelector('.wrapper');
+        const nav = document.querySelector('.nav');
+
+        const stickyNav = nav.getBoundingClientRect().top;
+
+        // give this a negative number to make the header
+        // snap to the top of the page before touching it
+        const offset = 0;
+
+        window.addEventListener('scroll', function () {
+            if (window.pageYOffset >= stickyNav + offset) {
+                nav.classList.add('sticky');
+            } else {
+                nav.classList.remove('sticky');
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>
