@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="classes.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="peregraph">
+            <h1>home</h1>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint quaerat harum, magnam amet molestiae,
+                reiciendis impedit iure est alias, aut facilis quo adipisci dolore quod excepturi veniam! Excepturi
+                repudiandae necessitatibus quam nemo atque ut eius, distinctio voluptates reprehenderit cum explicabo
+                adipisci, consequatur saepe quia. Ex minima illo sit modi commodi!
+            </p> <br><br>
+        </div>
+        <div class="peregraph-1">
+            <h2>about us</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab incidunt iure voluptas rem tenetur dolores,
+                animi, inventore non autem praesentium commodi dignissimos eius, doloribus quas? Quia nam atque placeat
+                consectetur rem laboriosam ipsam nemo facere adipisci optio! Sunt ex iste mollitia magni eum aliquam sed
+                blanditiis, repellat odit, ullam laudantium!
+
+            </p><br><br>
+        </div>
+
+        <div class="peregraph-2">
+            <h3>contect</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, deserunt? Nostrum quos tempore
+                reprehenderit
+                tenetur, odio illo assumenda expedita illum officia? Atque temporibus quo consequuntur sed itaque libero
+                animi sequi, quas error quibusdam minima reiciendis officiis ullam perferendis dignissimos alias hic
+                obcaecati, molestias magni explicabo ducimus sapiente? Aliquam, hic magni!
+            </p><br><br>
+        </div>
+    </div>
+
+    <button class="hide">hide</button>
+    <button class="show">show</button>
+    <button class="toggle">toggle</button>
+
+    <script src="./jq/releases.jquery.com_git_jquery-git.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("body").keypress(function () {
+                $(this).css("background-color", "lightyellow")
+                $(this).css("color", "gold")
+            });
+        });
+
+        $(document).ready(function () {
+            $("body").keyup(function () {
+                $(this).css("background-color", "darkcyan")
+            });
+        });
+
+        $(document).ready(function () {
+            $(".peregraph").click(function () {
+                $(this).css("font-size", "22px")
+                $(this).css("font-style", "italic")
+            });
+        });
+
+        $(document).ready(function () {
+            $(".peregraph-1").click(function () {
+                $(this).css("font-size", "22px")
+            });
+        });
+
+        $(document).ready(function () {
+            $(".peregraph-2").click(function () {
+                $(this).css("font-size", "22px")
+            });
+        });
+
+        $(document).ready(function () {
+            $("button").mouseenter(function () {
+                $(this).css("font-size", "20px")
+                $(this).css("border-redius", "10px")
+                $(this).css("color", "black")
+                $(this).css("background-color", "peru")
+            });
+        });
+
+        $('.hide').click(function (){
+            $('.peregraph').hide(3000);
+        })
+
+        $('.show').click(function (){
+            $('.peregraph').show(3000);
+        })
+
+        $('.hide').dblclick(function (){
+            $('.peregraph-1').hide(3000);
+        })
+
+        $('.show').dblclick(function (){
+            $('.peregraph-1').show(3000);
+        })
+
+    </script>
+</body>
+
+</html>
