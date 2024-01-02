@@ -1,0 +1,39 @@
+body {
+    background-color: #e0f7fa;
+  }
+  .timer-container {
+    width: 400px;
+    background-color:#00bcd4;
+    padding: 50px 50px 40px;
+    border-radius: 10px;
+    margin: 120px auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  .input-wrap input {
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 0;
+    font-size: 20px;
+    height: 43px;
+  }
+  .input-wrap button {
+    display: block;
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: 0;
+    margin-top; 10px;
+    margin: 25px auto 0;
+    font-size: 18px;
+    color: #fff;
+    background-color: #006064;
+    cursor: pointer;
+  }
+  .timer-wrap {
+    font-size: 65px;
+    text-align: center;
+    color: #fff;
+  }
+
+  

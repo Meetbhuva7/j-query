@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="partical.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- tsParticles container -->
+    <div id="tsparticles"></div>
+    <!-- https://github.com/matteobruni/tsparticles -->
+    <div class="github">
+        <a class="btn btn-link" href="https://github.com/matteobruni/tsparticles" title="Find more info on GitHub">
+            <img class="img-fluid" id="gh-mark"
+                src="https://cdn.matteobruni.it/images/particles/GitHub-Mark-120px-plus.png" alt="">
+            <span id="gh-project">Made with tsParticles</span>
+        </a>
+        <div>
+            <a class="github-button" href="https://github.com/matteobruni/tsparticles" data-icon="octicon-star"
+                data-show-count="true" aria-label="Star matteobruni/tsparticles on GitHub">Star</a>
+            <a class="github-button" href="https://github.com/matteobruni/tsparticles/fork"
+                data-icon="octicon-repo-forked" data-show-count="true"
+                aria-label="Fork matteobruni/tsparticles on GitHub">Fork</a>
+            <a class="github-button" href="https://github.com/matteobruni/tsparticles/releases/tag/tsparticles%401.28.0"
+                data-icon="octicon-download" aria-label="Download matteobruni/tsparticles on GitHub">Download</a>
+        </div>
+    </div>
+    
+    <script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
+    <script src="../events/jq/releases.jquery.com_git_jquery-git.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.18.3/dist/tsparticles.min.js"></script>
+    <script>
+        tsParticles.load("tsparticles", {
+            fpsLimit: 60,
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onclick: { enable: true, mode: "repulse" },
+                    onhover: {
+                        enable: true,
+                        mode: "bubble",
+                        parallax: { enable: false, force: 2, smooth: 10 }
+                    },
+                    resize: true
+                },
+                modes: {
+                    bubble: { distance: 200, duration: 2, opacity: 0, size: 0, speed: 3 },
+                    grab: { distance: 400, line_linked: { opacity: 1 } },
+                    push: { particles_nb: 4 },
+                    remove: { particles_nb: 2 },
+                    repulse: { distance: 400, duration: 0.4 }
+                }
+            },
+            particles: {
+                color: { value: "#ffffff" },
+                line_linked: {
+                    color: "#ffffff",
+                    distance: 150,
+                    enable: false,
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    attract: { enable: false, rotateX: 600, rotateY: 600 },
+                    bounce: false,
+                    direction: "none",
+                    enable: true,
+                    out_mode: "out",
+                    random: true,
+                    speed: 0.3,
+                    straight: false
+                },
+                number: { density: { enable: true, value_area: 800 }, value: 600 },
+                opacity: {
+                    anim: { enable: true, opacity_min: 0.3, speed: 5, sync: false },
+                    random: {
+                        enable: true,
+                        minimumValue: 0.3
+                    },
+                    value: 0.6
+                },
+                shape: {
+                    type: "circle"
+                },
+                size: {
+                    anim: { enable: false, size_min: 0.3, speed: 4, sync: false },
+                    random: false,
+                    value: 1
+                }
+            },
+            retina_detect: true
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    /* margin: 0;
+    padding: 0; */
+    overflow-x: hidden;
+}
+
+.swiper {
+    max-width: 50%;
+    overflow: visible;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    /*   height: 300px; */
+    position: relative;
+}
+
+.swiper-slide::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, #b8b8b88f, #ffffff5e);
+}
+
+.swiper-slide-active::after {
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.swiper-slide>div {
+    text-align: center;
+    display: none;
+    opacity: 0;
+}
+
+.swiper-slide-active div {
+    display: block;
+    opacity: 1;
+    z-index: 9;
+}
+
+.swiper-slide h2 {
+    font-size: 1.2rem;
+    font-family: "Libre Baskerville", serif;
+    color: #fff;
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.swiper-slide-active h2::after {
+    animation: line 0.5s linear forwards;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 0px 0px 60px rgb(0 0 0 / 25%);
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    animation-name: zoom;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+@media (min-width: 768px) {
+    .swiper-slide h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Initially hide the previous and next slides */
+.swiper-slide-visible,
+.swiper-slide {
+    opacity: 0 !important;
+}
+
+.swiper-slide.swiper-slide-visible.swiper-slide-prev,
+.swiper-slide.swiper-slide-visible.swiper-slide-next {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.swiper-slide-active {
+    opacity: 1 !important;
+}
+
+/* Show the previous and next slides when hovering on navigation buttons */
+.swiper-button-prev:hover+.swiper .swiper-slide-prev,
+.swiper-button-next:hover+.swiper .swiper-slide-next {
+    opacity: 1 !important;
+    transition: opacity 1s ease;
+}
+
+/* Adjust arrow position */
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+    transform: translateY(-40%);
+    height: 130px;
+    width: 130px;
+    background: #fff;
+    border: 5px solid #fff;
+    border-radius: 50%;
+}
+
+/* .swiper-button-prev,
+.swiper-button-next {
+  z-index: 99;
+} */
+
+.mySwiper [class^="swiper-button-"]::after {
+    content: "";
+}
+
+.mySwiper [class^="swiper-button-"] {
+    font-size: 38px;
+    color: #173c55;
+}
+
+.mySwiper {
+    position: relative;
+}
+
+.mySwiper .swiper-button-next {
+    right: 30px;
+}
+
+.mySwiper .swiper-button-prev {
+    left: 30px;
+}

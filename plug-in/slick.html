@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="slider slider-for">
+            <div class="slick-slide">
+                <img src="./img/10a2f0c4221be23c238934528bab97e8.jpg" alt="">
+            </div>
+            <div class="slick-slide">
+                <img src="./img/img-2.jpg" alt="">
+            </div>
+            <div class="slick-slide">
+                <img src="./img/10a2f0c4221be23c238934528bab97e8.jpg" alt="">
+            </div>
+            <div class="slick-slide">
+                <img src="./img/img-2.jpg" alt="">
+            </div>
+            <div class="slick-slide">
+                <img src="./img/10a2f0c4221be23c238934528bab97e8.jpg" alt="">
+            </div>
+            <div class="slick-slide">
+                <img src="./img/img-2.jpg" alt="">
+            </div>
+        </div>
+        <div class="slider slider-nav">
+            <div class="slick-slide">
+              <img src="./img/10a2f0c4221be23c238934528bab97e8.jpg" alt="">
+            </div>
+            <div class="slick-slide">
+                <img src="./img/img-2.jpg" alt="">
+            </div>
+            <div class="slick-slide">
+                <img src="./img/10a2f0c4221be23c238934528bab97e8.jpg" alt="">
+              </div>
+              <div class="slick-slide">
+                  <img src="./img/img-2.jpg" alt="">
+              </div>
+              <div class="slick-slide">
+                <img src="./img/10a2f0c4221be23c238934528bab97e8.jpg" alt="">
+              </div>
+              <div class="slick-slide">
+                  <img src="./img/img-2.jpg" alt="">
+              </div>
+        </div>
+        <div class="action">
+            <a href="#" data-slide="3">go to slide 3</a>
+            <a href="#" data-slide="4">go to slide 4</a>
+            <a href="#" data-slide="5">go to slide 5</a>
+        </div>
+    </div>
+
+    <script src="../events/jq/releases.jquery.com_git_jquery-git.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <script>
+        $('.slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.slider-nav'
+        });
+        $('.slider-nav').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.slider-for',
+            dots: true,
+            focusOnSelect: true
+        });
+
+        $('a[data-slide]').click(function (e) {
+            e.preventDefault();
+            var slideno = $(this).data('slide');
+            $('.slider-nav').slick('slickGoTo', slideno - 1);
+        });
+    </script>
+</body>
+
+</html>

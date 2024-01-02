@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="headline.css">
+</head>
+
+<body>
+    <div id="cursor"></div>
+    <h1>Make something <span id="changingText"></span></h1>
+
+    <script src="../events/jq/releases.jquery.com_git_jquery-git.min.js"></script>\
+
+    <script>
+        const body = document.querySelector("body");
+        const cursor = document.querySelector("#cursor");
+
+        body.addEventListener("mousemove", (dets) => {
+            cursor.style.left = `${dets.x + 10}px`;
+            cursor.style.top = `${dets.y + 10}px`;
+        });
+
+    </script>
+
+    <script>
+        //you can change the text, but you need to keep same format [yourtext, color];
+        let yourtext = [
+            ["systemm", "#ffd166"],
+            ["stunning", "#7DE2D1"],
+            ["creative", "#DE3C4B"]
+        ];
+
+        let x = 0;
+        let y = 0;
+        //how fast typing is
+        let wait = 300;
+        //how long you want to text stay before overwriting
+        let additionalwait = 5;
+        let txt = yourtext[0][0].split("");
+        let out = "";
+        let retyping = setInterval(function () {
+            document.getElementById("changingText").innerHTML = out;
+            if (x > txt.length - 1) {
+            } else {
+                out += txt[x];
+            }
+            x++;
+            if (x == txt.length + 2 + additionalwait) {
+                if (y == yourtext.length - 1) {
+                    y = 0;
+                    txt = yourtext[y][0].split("");
+                    out = "";
+                    document.getElementById("changingText").innerHTML = out;
+                    document.getElementById("changingText").style.color = yourtext[y][1];
+                    x = 0;
+                } else {
+                    y += 1;
+                    txt = yourtext[y][0].split("");
+                    out = "";
+                    document.getElementById("changingText").innerHTML = out;
+                    document.getElementById("changingText").style.color = yourtext[y][1];
+                    x = 0;
+                }
+            }
+        }, wait);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
+</head>
+
+<body>
+
+    <!-- ---------------------------------------start-------------------------------------------- -->
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://source.unsplash.com/random/?cruse ship" />
+                <div class="title">
+                    <h2>lorem ispum</h2>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="https://source.unsplash.com/random/?river" />
+                <div class="title">
+                    <h2>Dummy text</h2>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="https://source.unsplash.com/random/?boat sailling" />
+                <div class="title">
+                    <h2>Our Clients</h2>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="https://source.unsplash.com/random/?beach" />
+                <div class="title">
+                    <h2>Toast bread with blueberry</h2>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="https://source.unsplash.com/random/?ship" />
+                <div class="title">
+                    <h2>Dummy Text</h2>
+                </div>
+            </div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-prev">
+            <i class="fa-solid fa-arrow-left"></i>
+        </div>
+        <div class="swiper-button-next">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+    </div>
+
+
+    <!-- ------------------------------------------end----------------------------------------------------- -->
+
+    <!-- ----------------------------------------start------------------------------------------------------- -->
+
+    <script src="../events/jq/releases.jquery.com_git_jquery-git.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>r
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/fontawesome-iconpicker/3.2.0/js/fontawesome-iconpicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            effect: "coverflow",
+            centeredSlides: true,
+            loop: true,
+            slidesPerView: "1",
+            spaceBetween: 80,
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 0,
+                modifier: 4,
+                slideShadows: false
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2
+                }
+            }
+        });
+        $(".swiper-button-prev").hover(
+            function () {
+                swiper.slides[swiper.activeIndex - 1].style.opacity = 1;
+            },
+            function () {
+                swiper.slides[swiper.activeIndex - 1].style.opacity = 0;
+            }
+        );
+
+        $(".swiper-button-next").hover(
+            function () {
+                swiper.slides[swiper.activeIndex + 1].style.opacity = 1;
+            },
+            function () {
+                swiper.slides[swiper.activeIndex + 1].style.opacity = 0;
+            }
+        );
+    </script>
+
+    <!-- --------------------------------------end---------------------------------------------- -->
+</body>
+
+</html>
